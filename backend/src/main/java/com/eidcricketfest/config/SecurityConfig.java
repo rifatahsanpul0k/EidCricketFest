@@ -61,8 +61,7 @@ public class SecurityConfig {
             .requestMatchers("/api/tournaments/**").permitAll()
             .requestMatchers("/api/matches/**").permitAll()
             .anyRequest().authenticated())
-        .httpBasic(httpBasic -> {
-        });
+        .httpBasic(httpBasic -> httpBasic.disable());
 
     return http.build();
   }
