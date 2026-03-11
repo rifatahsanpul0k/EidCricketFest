@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white font-space antialiased;
+}
+
+@layer components {
+  .ecf-card {
+    @apply bg-black border border-white/10 p-6 hover:border-primary/50 transition-all duration-300;
+  }
+
+  .ecf-btn-primary {
+    @apply bg-primary hover:bg-primary-hover text-white font-black uppercase py-4 px-8 transition-all duration-300 tracking-widest disabled:opacity-50;
+  }
+
+  .ecf-btn-outline {
+    @apply border border-white/20 hover:bg-white hover:text-black text-white font-black uppercase py-4 px-8 transition-all duration-300 tracking-widest;
+  }
+
+  .ecf-input {
+    @apply bg-black border border-white/20 text-white p-3 focus:outline-none focus:border-white transition-all placeholder:text-white/20;
+  }
+
+  .ecf-gradient-bg {
+    @apply bg-gradient-to-br from-neutral-800 to-black;
+  }
+
+  .ecf-match-live {
+    @apply border-2 border-primary bg-primary/5 shadow-[0_0_15px_rgba(229,26,26,0.2)] animate-pulse;
+  }
+
+  .ecf-match-scheduled {
+    @apply border border-white/20 bg-black;
+  }
+
+  .ecf-nav {
+    @apply fixed top-0 w-full p-4 bg-black/95 border-b border-white/10 backdrop-blur-md z-50;
+  }
+
+  .ecf-label {
+    @apply text-white/40 text-[9px] font-bold uppercase tracking-[4px];
+  }
+
+  .ecf-heading-1 {
+    @apply text-3xl font-black uppercase tracking-[3px];
+  }
+
+  .ecf-heading-2 {
+    @apply text-xl font-black uppercase tracking-wide;
+  }
+}
