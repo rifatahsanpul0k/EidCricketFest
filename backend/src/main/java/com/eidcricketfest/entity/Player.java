@@ -52,6 +52,6 @@ public class Player {
   @Max(value = 100, message = "Fielding rating cannot exceed 100")
   private int fieldingRating;
 
-  @Column(columnDefinition = "LONGTEXT")
+  @Column(columnDefinition = "TEXT")
   private String imageUrl;
 }
