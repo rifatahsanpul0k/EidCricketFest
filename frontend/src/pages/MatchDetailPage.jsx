@@ -15,7 +15,7 @@ const MatchDetailPage = () => {
     const fetch = async () => {
       try {
         const liveRes = await axios.get(
-          `http://localhost:8080/api/matches/${id}/live-score`,
+          `https://eidcricketfest-1.onrender.com/api/matches/${id}/live-score`,
         );
         setDetails(liveRes.data);
       } catch {

@@ -15,12 +15,12 @@ const LandingPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/teams")
+      .get("https://eidcricketfest-1.onrender.com/api/teams")
       .then((res) => setTeams(res.data))
       .catch(() => {});
 
     axios
-      .get("http://localhost:8080/api/matches")
+      .get("https://eidcricketfest-1.onrender.com/api/matches")
       .then((res) => {
         const liveAndUpcoming = res.data
           .filter((m) => m.status === "LIVE" || m.status === "SCHEDULED")
@@ -29,7 +29,7 @@ const LandingPage = () => {
         Promise.all(
           liveAndUpcoming.map((match) =>
             axios
-              .get(`http://localhost:8080/api/matches/${match.id}/live-score`)
+              .get(`https://eidcricketfest-1.onrender.com/api/matches/${match.id}/live-score`)
               .then((scoreRes) => ({ ...match, ...scoreRes.data }))
               .catch(() => match),
           ),

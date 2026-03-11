@@ -17,7 +17,7 @@ const AdminLoginPage = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/auth/login",
+        "https://eidcricketfest-1.onrender.com/api/auth/login",
         form,
       );
       login(res.data);

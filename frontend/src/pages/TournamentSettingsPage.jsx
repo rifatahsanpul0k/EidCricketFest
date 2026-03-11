@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AdminLayout from "../components/AdminLayout";
 
-const API = "http://localhost:8080/api";
+const API = "https://eidcricketfest-1.onrender.com/api";
 const TOURNAMENT_ID = 1;
 
 const Field = ({ label, children }) => (

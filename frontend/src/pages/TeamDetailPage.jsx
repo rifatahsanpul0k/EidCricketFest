@@ -25,7 +25,7 @@ const PlayerDetailModal = ({ player, onClose }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/players/${player.playerId}`)
+      .get(`https://eidcricketfest-1.onrender.com/api/players/${player.playerId}`)
       .then((res) => setPlayerData(res.data))
       .catch(() => console.error("Could not load player details"))
       .finally(() => setLoading(false));
@@ -148,7 +148,7 @@ const TeamDetailPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/teams/${id}/stats`)
+      .get(`https://eidcricketfest-1.onrender.com/api/teams/${id}/stats`)
       .then((res) => setTeam(res.data))
       .catch(() => setError("Could not load team."))
       .finally(() => setLoading(false));

@@ -9,7 +9,7 @@ const SchedulePage = () => {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/matches");
+        const res = await axios.get("https://eidcricketfest-1.onrender.com/api/matches");
         setMatches(res.data);
       } catch {
         console.error("Error fetching matches");

@@ -18,11 +18,11 @@ const ScorerConsole = () => {
     useEffect(() => {
         const fetchMatch = async () => {
             try {
-                const res = await axios.get(`http://localhost:8080/api/matches/${id}/live-score`);
+                const res = await axios.get(`https://eidcricketfest-1.onrender.com/api/matches/${id}/live-score`);
                 setMatch(res.data);
                 
                 // Get scorecard for player info
-                const scorecardRes = await axios.get(`http://localhost:8080/api/matches/${id}/scorecard`);
+                const scorecardRes = await axios.get(`https://eidcricketfest-1.onrender.com/api/matches/${id}/scorecard`);
                 const scoreData = scorecardRes.data;
                 
                 // Set initial batters and bowler
@@ -66,7 +66,7 @@ const ScorerConsole = () => {
                 isLegBye: false
             };
             
-            await axios.post(`http://localhost:8080/api/matches/${id}/deliveries`, deliveryData);
+            await axios.post(`https://eidcricketfest-1.onrender.com/api/matches/${id}/deliveries`, deliveryData);
             
             // Update score
             const newBalls = score.balls + 1;
@@ -88,7 +88,7 @@ const ScorerConsole = () => {
     // Handle undo last delivery
     const undoLastBall = async () => {
         try {
-            await axios.delete(`http://localhost:8080/api/matches/${id}/deliveries/latest`);
+            await axios.delete(`https://eidcricketfest-1.onrender.com/api/matches/${id}/deliveries/latest`);
             
             // Recalculate overs/balls
             let totalBalls = score.overs * 6 + score.balls - 1;

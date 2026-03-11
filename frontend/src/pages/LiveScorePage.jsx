@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
-const API = "http://localhost:8080/api";
+const API = "https://eidcricketfest-1.onrender.com/api";
 
 const LiveScorePage = () => {
   const { id } = useParams();

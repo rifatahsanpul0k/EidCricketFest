@@ -12,7 +12,7 @@ const AdminLayout = ({ children }) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/api/matches")
+      .get("https://eidcricketfest-1.onrender.com/api/matches")
       .then((r) => setMatches(r.data))
       .catch(() => {});
   }, []);

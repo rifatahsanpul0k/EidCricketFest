@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { useAuth } from "../hooks/useAuth";
 
-const API = "http://localhost:8080/api";
+const API = "https://eidcricketfest-1.onrender.com/api";
 
 const DraftPage = () => {
   const navigate = useNavigate();

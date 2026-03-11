@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
 import { useAuth } from "../hooks/useAuth";
 
-const API = "http://localhost:8080/api";
+const API = "https://eidcricketfest-1.onrender.com/api";
 
 const ROLES = ["BATSMAN", "BOWLER", "ALL_ROUNDER", "WICKETKEEPER"];
 const ROLE_STYLE = {

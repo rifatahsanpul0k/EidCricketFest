@@ -88,7 +88,7 @@ const LiveScorerConsole = () => {
   const fetchScore = useCallback(async () => {
     try {
       const r = await axios.get(
-        `http://localhost:8080/api/matches/${matchId}/scoreboard`,
+        `https://eidcricketfest-1.onrender.com/api/matches/${matchId}/scoreboard`,
       );
       setScore({
         totalRuns: r.data.totalRuns || 0,
@@ -104,7 +104,7 @@ const LiveScorerConsole = () => {
   const fetchCtx = useCallback(async () => {
     try {
       const r = await axios.get(
-        `http://localhost:8080/api/matches/${matchId}/context`,
+        `https://eidcricketfest-1.onrender.com/api/matches/${matchId}/context`,
       );
       setCtx({
         team1Name: r.data.team1Name || "Team 1",
@@ -133,7 +133,7 @@ const LiveScorerConsole = () => {
     const isExtra = extraTypes.includes(extraType);
     try {
       await axios.post(
-        `http://localhost:8080/api/matches/${matchId}/deliveries`,
+        `https://eidcricketfest-1.onrender.com/api/matches/${matchId}/deliveries`,
         {
           runsOffBat: runs,
           extras: isExtra ? 1 : 0,
@@ -183,7 +183,7 @@ const LiveScorerConsole = () => {
   const undo = async () => {
     try {
       await axios.delete(
-        `http://localhost:8080/api/matches/${matchId}/deliveries/latest`,
+        `https://eidcricketfest-1.onrender.com/api/matches/${matchId}/deliveries/latest`,
       );
       await fetchScore();
       setBallLog((prev) => prev.slice(0, -1));
