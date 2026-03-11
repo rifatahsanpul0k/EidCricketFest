@@ -1,9 +1,14 @@
 /**
  * API Configuration
  * Centralized API endpoints and base URLs
+ *
+ * Set VITE_API_BASE_URL in your .env file (or Vercel env vars) to point at
+ * your production backend, e.g.:
+ *   VITE_API_BASE_URL=https://eid-cricket-fest.onrender.com/api
  */
 
-export const API_BASE_URL = "http://localhost:8080/api";
+export const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:8080/api";
 
 export const API_ENDPOINTS = {
   // Teams
