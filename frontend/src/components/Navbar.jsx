@@ -15,17 +15,8 @@ const Navbar = () => {
         <div className="w-8 h-8 bg-white rounded flex items-center justify-center group-hover:rotate-12 transition-transform">
           <span className="text-black font-black text-lg">E</span>
         </div>
-        <div className="flex flex-col">
-          <div className="text-white text-base font-black uppercase tracking-[2px]">
-            ECF • 2024
-          </div>
-          <div
-            className={`text-[8px] font-black uppercase tracking-[1.5px] ${
-              isAdmin ? "text-amber-400" : "text-cyan-400"
-            }`}
-          >
-            {isAdmin ? "👤 Admin Mode" : "👥 User Mode"}
-          </div>
+        <div className="text-white text-base font-black uppercase tracking-[2px]">
+          ECF • 2024
         </div>
       </div>
 
@@ -54,9 +45,9 @@ const Navbar = () => {
         {isAdmin && (
           <button
             onClick={() => navigate("/admin")}
-            className="hidden md:block px-4 py-1.5 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-[10px] font-black uppercase tracking-[2px] rounded hover:bg-amber-500/30 transition-all"
+            className="hidden md:block px-4 py-1.5 bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-[10px] font-black uppercase tracking-[2px] rounded hover:bg-cyan-500/30 transition-all"
           >
-            CONSOLE
+            DASHBOARD
           </button>
         )}
 
