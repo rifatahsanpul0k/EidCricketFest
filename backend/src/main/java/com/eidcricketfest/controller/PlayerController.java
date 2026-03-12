@@ -30,7 +30,6 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/players")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
 public class PlayerController {
 
   private final PlayerRepository playerRepository;

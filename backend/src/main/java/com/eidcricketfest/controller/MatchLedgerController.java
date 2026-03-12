@@ -36,7 +36,6 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/matches")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
 public class MatchLedgerController {
 
   private final LedgerService ledgerService;

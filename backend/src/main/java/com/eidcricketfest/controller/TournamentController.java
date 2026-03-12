@@ -38,7 +38,6 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/tournaments")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173")
 public class TournamentController {
 
   private final DraftService draftService;

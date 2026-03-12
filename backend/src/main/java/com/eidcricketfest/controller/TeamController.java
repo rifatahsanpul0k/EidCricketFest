@@ -10,12 +10,10 @@ import java.util.stream.Collectors;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.eidcricketfest.entity.MatchFixture;
@@ -31,8 +29,6 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/teams")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*", methods = { RequestMethod.GET, RequestMethod.POST,
-    RequestMethod.DELETE, RequestMethod.PATCH, RequestMethod.PUT, RequestMethod.OPTIONS })
 public class TeamController {
 
   private final TeamRepository teamRepository;
